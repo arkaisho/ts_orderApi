@@ -14,10 +14,10 @@ module.exports = {
       path.join(__dirname, '**','entity','*.{ts,js}')
    ],
    migrations: [
-      "src/migration/**/*.ts"
+      path.join(__dirname, '**','migration','*.{ts,js}')
    ],
    subscribers: [
-      "src/subscriber/**/*.ts"
+      path.join(__dirname, '**','subscriber','*.{ts,js}')
    ],
    cli: {
       "entitiesDir": "src/entity",
