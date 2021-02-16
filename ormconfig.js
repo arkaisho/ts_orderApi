@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const path = require('path'); 
 module.exports = {
    type: "postgres",
    port: 5432,
@@ -11,7 +11,7 @@ module.exports = {
    synchronize: true,
    logging: false,
    entities: [
-      join(__dirname, '**', '*.entity.{ts,js}')
+      path.join(__dirname, '**', '*.entity.{ts,js}')
    ],
    migrations: [
       "src/migration/**/*.ts"
