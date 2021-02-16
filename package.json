@@ -17,6 +17,8 @@
    },
    "scripts": {
       "watch":"nodemon ./src/app.ts",
-      "start": "ts-node src/app.ts"
+      "start": "node build/index.js",
+      "build": "tsc",
+      "postinstall": "npm run build"
    }
 }
