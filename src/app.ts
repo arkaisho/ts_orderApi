@@ -1,6 +1,7 @@
 import * as express from "express";
 import router from "./router";
 import { createConnection } from "typeorm";
+require("dotenv").config();
 
 const app = express();
 
