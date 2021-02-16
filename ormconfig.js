@@ -11,7 +11,7 @@ module.exports = {
    synchronize: true,
    logging: false,
    entities: [
-      path.join(__dirname, '**', '*.entity.{ts,js}')
+      path.join(__dirname, '**','entity','*.{ts,js}')
    ],
    migrations: [
       "src/migration/**/*.ts"
