@@ -9,14 +9,14 @@ const show = async (req: Request, res: Response) => {
   return res.json(await getRepository(Order).findOne(req.params.id));
 };
 const create = async (req: Request, res: Response) => {
-  const user = getRepository(Order).create(req.body);
-  const result = await getRepository(Order).save(user);
+  const order = getRepository(Order).create(req.body);
+  const result = await getRepository(Order).save(order);
   return res.json(result);
 };
 const update = async (req: Request, res: Response) => {
-  const user = await getRepository(Order).findOne(req.params.id);
-  getRepository(Order).merge(user, req.body);
-  const results = await getRepository(Order).save(user);
+  const order = await getRepository(Order).findOne(req.params.id);
+  getRepository(Order).merge(order, req.body);
+  const results = await getRepository(Order).save(order);
   return res.send(results);
 };
 const destroy = async (req: Request, res: Response) => {
