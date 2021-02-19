@@ -1,5 +1,8 @@
 # ts_orderApi
-A simple API to organize orders in a confectionery
+A simple API to organize orders in a confectionery.
+
+* Using typeorm and express
+* Online on [Heroku](https://ts-confectionery.herokuapp.com/)
 
 # Https routes
 
