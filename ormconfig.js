@@ -11,7 +11,7 @@ module.exports = {
    synchronize: true,
    logging: false,
    entities: [
-      "build/entity/**/*.js",
+      process.env.ENVIRONMENT!="dev"?"build/entity/**/*.js":"src/entity/**/*.ts",
    ],
    migrations: [
       "src/migration/**/*.ts"

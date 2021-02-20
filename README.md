@@ -31,3 +31,30 @@ Use this JSON structure to manipulate data.
   "observation": "observação"
 }
 ```
+
+# Run locally
+
+First install the dependencies:
+```bash
+yarn install
+```
+Export yours environment variables to connect to your database:
+```bash
+export TYPEORM_HOST="database.address.com";
+export TYPEORM_DATABASE="database";
+export TYPEORM_USERNAME="username";
+export TYPEORM_PASSWORD="password";
+export PORT=8888;
+```
+Run with nodemon script:
+```bash
+yarn watch
+```
+
+# Deploy on heroku
+
+Procfile and package.json scripts are already defineds to deploy on Heroku. To run the deploy on heroku do:
+* Clone this repository in your own repository.
+* Create a heroku app.
+* Define environment variables on heroku plataform
+* Configure the heroku application to automatically deploy from your git repository.
