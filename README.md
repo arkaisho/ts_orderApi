@@ -7,14 +7,16 @@ A simple API to organize orders in a confectionery.
 # Https routes
 
 Use this routes to insert, delete, update and list orders.
+* Notice that you have to login in order to get one token before acessing the actual data from the system.
 
-|  action | method  | url | body |
-|---|---|---|---|
-| list all|  GET | https://ts-confectionery.herokuapp.com/ | none |
-|  create |  POST | https://ts-confectionery.herokuapp.com/create | {order} |
-|  update |  PUT |  https://ts-confectionery.herokuapp.com/update/id | {order} |
-|  detail |  GET |  https://ts-confectionery.herokuapp.com/show/id | none |
-|  delete |  DELETE | https://ts-confectionery.herokuapp.com/delete/id  | none |
+|  action | method  | url | body | header |
+|---|---|---|---|---|
+| login|  POST | https://ts-confectionery.herokuapp.com/login | {"username":"username","password":"password"} |none |
+| list all|  GET | https://ts-confectionery.herokuapp.com/ | none | {"token":"encrypted token"} |
+|  create |  POST | https://ts-confectionery.herokuapp.com/create | {order} | {"token":"encrypted token"} |
+|  update |  PUT |  https://ts-confectionery.herokuapp.com/update/id | {order} | {"token":"encrypted token"} |
+|  detail |  GET |  https://ts-confectionery.herokuapp.com/show/id | none | {"token":"encrypted token"} |
+|  delete |  DELETE | https://ts-confectionery.herokuapp.com/delete/id  | none | {"token":"encrypted token"} |
 
 # Order JSON structure
 
@@ -40,11 +42,14 @@ yarn install
 ```
 Export yours environment variables to connect to your database:
 ```bash
-export TYPEORM_HOST="database.address.com";
-export TYPEORM_DATABASE="database";
-export TYPEORM_USERNAME="username";
-export TYPEORM_PASSWORD="password";
-export PORT=8888;
+export TYPEORM_HOST="database.address.com"; #the ip or dns address of the database
+export TYPEORM_DATABASE="database"; #the database name
+export TYPEORM_USERNAME="username"; #database username
+export TYPEORM_PASSWORD="password"; #database password
+export LOGIN_USERNAME="username"; #login username
+export LOGIN_PASSWORD="password"; #login password
+export JWT_KEY="jwt_key"; #encryption key
+export PORT=8888; #system port (only local running)
 ```
 Run with nodemon script:
 ```bash
@@ -56,5 +61,5 @@ yarn watch
 Procfile and package.json scripts are already defineds to deploy on Heroku. To run the deploy on heroku do:
 * Clone this repository in your own repository.
 * Create a heroku app.
-* Define environment variables on heroku plataform
+* Define environment variables  on heroku plataform (same as local running except for PORT)
 * Configure the heroku application to automatically deploy from your git repository.
