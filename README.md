@@ -26,6 +26,7 @@ Use this JSON structure to manipulate data.
 {
   "clientName": "nome do cliente",
   "telphone": "(00)99999-9999",
+  "whatsApp": "(00)99999-9999",
   "deliveryDate": "2021-01-15",
   "pasta": " masssa",
   "filling": "recheio",
@@ -61,5 +62,6 @@ yarn watch
 Procfile and package.json scripts are already defineds to deploy on Heroku. To run the deploy on heroku do:
 * Clone this repository in your own repository.
 * Create a heroku app.
+* Create a heroku postgres database for this app.
 * Define environment variables  on heroku plataform (same as local running except for PORT)
 * Configure the heroku application to automatically deploy from your git repository.
