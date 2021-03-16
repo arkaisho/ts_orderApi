@@ -10,6 +10,14 @@ module.exports = {
 
    synchronize: true,
    logging: false,
+
+   ssl: true,
+   extra: {
+      ssl: {
+         rejectUnauthorized: false
+     }
+   },
+
    entities: [
       process.env.ENVIRONMENT!="dev"?"build/entity/**/*.js":"src/entity/**/*.ts",
    ],

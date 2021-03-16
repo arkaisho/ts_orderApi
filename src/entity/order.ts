@@ -11,6 +11,9 @@ export default class Order extends BaseEntity {
   @Column()
   telphone: string;
 
+  @Column()
+  wathsApp: string;
+
   @Column({ type: 'date' })
   deliveryDate: Date;
 
@@ -25,7 +28,4 @@ export default class Order extends BaseEntity {
 
   @Column()
   observation: string;
-
-  // @Column()
-  // photograph: string;
 }
