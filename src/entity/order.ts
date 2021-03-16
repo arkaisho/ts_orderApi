@@ -12,7 +12,7 @@ export default class Order extends BaseEntity {
   telphone: string;
 
   @Column()
-  wathsApp: string;
+  whatsApp: string;
 
   @Column({ type: 'date' })
   deliveryDate: Date;
