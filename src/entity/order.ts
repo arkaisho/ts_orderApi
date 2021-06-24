@@ -28,4 +28,7 @@ export default class Order extends BaseEntity {
 
   @Column()
   observation: string;
+
+  @Column()
+  price: number;
 }

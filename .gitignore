@@ -6,3 +6,7 @@ tmp/
 temp/
 
 ormconfig.json
+
+yarn.lock
+
+yarn-error.log
