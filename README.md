@@ -31,7 +31,8 @@ Use this JSON structure to manipulate data.
   "pasta": " masssa",
   "filling": "recheio",
   "cover": "cobertura",
-  "observation": "observação"
+  "observation": "observação",
+  "price": 10,
 }
 ```
 
